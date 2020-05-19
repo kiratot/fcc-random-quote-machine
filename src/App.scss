@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Carrois+Gothic&display=swap");
+
+$Raisin-black: #242423;
+$Ivory: #e8eddf;
+$Gainsboro: #cfdbd5;
+$Maize: #f5cb5c;
+$Jet: #333533;
+
+body {
+  font-family: "Carrois Gothic", sans-serif;
+  background-color: $Raisin-black;
+}
+
+#quote-box {
+  border-radius: 2em;
+  width: 50%;
+  background-color: $Jet;
+  padding: 2em;
+  margin: 2em auto;
+}
+
+#text {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: $Ivory;
+
+  p:before {
+    font-family: "Cardo", serif;
+    content: "“";
+    font-size: 2em;
+    color: $Maize;
+  }
+
+  p::after {
+    font-family: "Cardo", serif;
+    content: "”";
+    font-size: 2em;
+    color: $Maize;
+  }
+}
+
+#author {
+  text-align: right;
+  margin: 2em auto;
+  font-family: "Cardo", serif;
+  color: $Maize;
+}
+
+.button_wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+  .button {
+    font-family: "Carrois Gothic", sans-serif;
+    font-weight: 700;
+    padding: 1em;
+    border-radius: 1em;
+  }
+
+  #new-quote {
+    color: $Raisin-black;
+  }
+
+  #tweet-quote {
+    background-color: $Raisin-black;
+    color: $Ivory;
+  }
+}
+
+.transition-fadein {
+  animation: fadein 0.5s linear;
+}
+
+.hide {
+  display: none
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
